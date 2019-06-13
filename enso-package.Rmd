@@ -38,6 +38,7 @@ library(zoo)
 library(here)
 library(roxygen2)
 library(devtools)
+install_github("molly-williams/enso")
 library(enso)
 library(testthat)
 
