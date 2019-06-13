@@ -17,3 +17,12 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(enso)
 ```
+
+
+```{r}
+library(devtools)
+install_github("molly-williams/enso")
+```
+
+
+

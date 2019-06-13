@@ -4,13 +4,7 @@ Title: El Nino Effects in Port Moresby, Papua New Guinea
 Version: 0.1.0
 Author: Austin Richards and Molly Williams
 Maintainer: Austin Richards (ARichards@bren.ucsb.edu)
-Description: This package analyzes the relationship between
-ENSO and patterns of historical precipitation, temperature
-and natural disaster costs in Papua New Guinea. Using a series of 
-regression models, functions within in this package can be used
-to estimate monthly averge rainfall and temperature in Port Moresby
-and natural disaster associated costs in Papua New Guinea as a function
-of ONI index score.
+Description: This package analyzes the relationship between ENSO and patterns of historical precipitation, temperature and natural disaster costs in Papua New Guinea. Using a series of regression models, functions within in this package can be used to estimate monthly averge rainfall and temperature in Port Moresby and natural disaster associated costs in Papua New Guinea as a function of ONI index score.
 License: Unlicenced
 Encoding: UTF-8
 LazyData: true
