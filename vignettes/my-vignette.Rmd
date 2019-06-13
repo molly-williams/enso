@@ -1,5 +1,5 @@
 ---
-title: "my-vignette"
+title: "ENSO Package"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{my-vignette}
@@ -33,8 +33,6 @@ Data sources: [NOAA ESRL](https://www.esrl.noaa.gov/psd/data/correlation/oni.dat
     - predict_temp(): Function predicts temperature in Port Moresby, Papua new Guinea based on ONI and month. Function works by using a linear model from historical data. The user inputs an index score and month (which must be entered numerically, 1 for January, 2 for February, etc.)
 
 3) **Cost estimation function**
-    - enso_cost(): Function which estimates annual natural disaster damage costs in Papua New Guinea which could be attributed to El Nino. The International Monetary Fund found that at baseline, Papua New Guinea is at 81.1% risk of a natural disaster in a given year, and that mean damages of disasters are equal to .3% of PNGs GDP. For the purposes of this assignment, let's assume research finds that when it is an El Nino season (defined as a period where ONI > .05) every increase in 1 ONI point results in an equivellent 6% increase increase in the risk of a mean damage causing storm. This function calcualtes expected increase in El Nino attributed damgage costs based on this assumption and the GDP of of Papua New Guinea. 
-
-https://www.imf.org/en/Publications/WP/Issues/2018/05/10/The-Economic-Impact-of-Natural-Disasters-in-Pacific-Island-Countries-Adaptation-and-45826
+    - enso_cost(): Function which estimates annual natural disaster damage costs in Papua New Guinea which could be attributed to El Nino. The International Monetary Fund found that at baseline, Papua New Guinea is at 81.1% risk of a natural disaster in a given year, and that mean damages of disasters are equal to .3% of PNGs GDP. For the purposes of this assignment, let's assume research finds that when it is an El Nino season (defined as a period where ONI > .05) every increase in 1 ONI point results in an equivellent 6% increase increase in the risk of a mean damage causing storm. This function calcualtes expected increase in El Nino attributed damgage costs based on this assumption and the GDP of of Papua New Guinea. https://www.imf.org/en/Publications/WP/Issues/2018/05/10/The-Economic-Impact-of-Natural-Disasters-in-Pacific-Island-Countries-Adaptation-and-45826
 
 
