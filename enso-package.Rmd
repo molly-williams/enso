@@ -35,8 +35,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
 library(zoo)
-
-source("oni_function.R") # do we have to source the functions if you have a package loaded?
+library(here)
+library(roxygen2)
+library(devtools)
+library(enso)
+library(testthat)
 
 ```
 
@@ -46,7 +49,7 @@ source("oni_function.R") # do we have to source the functions if you have a pack
 # Import data from ONI databse (NOAA ESRL) as a multi-dimensional array
 enso_data_raw <-
   read_delim(
-    "oni data.csv",
+    "data/oni_data.csv",
     delim = " ",
     col_types = cols(.default = col_character())
   )
@@ -61,9 +64,10 @@ enso_data <-  enso_data_raw %>%
                    ONI = parse_double(ONI))
 
 enso_data <- mutate(enso_data, date=with(enso_data, sprintf("%d-%02d", year, month)))
+use_data(enso_data, overwrite = TRUE)
 
-#Adding weather data from Port Moresby, Papua New Guinea, taken from NOAA data tool and creating a dataframe which contains monthly ONI value along with Precipitation and Temperature for every month available (up tell 2003)
-weather <- read_csv("port_moresby_weather.csv")
+# Adding weather data from Port Moresby, Papua New Guinea, taken from NOAA data tool and creating a dataframe which contains monthly ONI value along with Precipitation and Temperature for every month available (up tell 2003)
+weather <- read_csv("data/port_moresby_weather.csv")
 colnames(weather)[colnames(weather)=="DATE"] <- "date"
 port_moresby <- left_join(weather, enso_data, by = "date")
 port_moresby$month <- as.factor(port_moresby$month)
@@ -100,6 +104,7 @@ enso_plot(enso_data)
 #precipitation function, user inputs ONI only, result is in monthly rainfall in inches
 
 predict_precip(port_moresby, ONI = 1)
+
 ```
 
 

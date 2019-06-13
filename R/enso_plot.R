@@ -1,7 +1,8 @@
-#' ONI Functions
-#' @title Impacts of ENSO 
+#' Part of a series of ENSO functions in library(enso)
+#'
+#' @title Impacts of ENSO
 #' @description This functions produces a figure of ONI values over time (1950-)
-#' @param data Data frame with most recent ENSO values 
+#' @param data Data frame with most recent ENSO values
 #' @param graph_result if TRUE, output a graphical representation of ENSO values over time
 #' @return Geom_smooth plot
 #'
@@ -20,10 +21,10 @@ enso_plot = function(data) {
     ylab("Oceanic Nino Index (ONI)") +
     xlab("Year") +
     labs(title = "Historic Cold & Warm Episodes",
-         subtitle = "Monthly Data, Source: NOAA ESRL") 
-  
-  
+         subtitle = "Monthly Data, Source: NOAA ESRL")
+
+
   return(plot)
-  
-  
+
+
 }
