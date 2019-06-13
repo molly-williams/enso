@@ -13,15 +13,16 @@
 
 ### Predict Temp
 
-'%!in%' <- function(x,y)!('%in%'(x,y))
-
-possible_months <- c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12")
 
 
 predict_temp = function(data, month, ONI=0) {
   model <- lm(TAVG ~ month + ONI, data = (data))
   prediction <- model$coefficients[1] + model$coefficients[month] + (ONI * model$coefficients[13])
   prediction_jan <- model$coefficients[1] + (ONI * model$coefficients[13])
+
+  '%!in%' <- function(x,y)!('%in%'(x,y))
+
+  possible_months <- c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12")
 
 
   names(prediction) <- NULL

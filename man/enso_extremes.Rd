@@ -16,7 +16,7 @@ Max and min values
 This function finds maximum/minimum of historical ENSO data (1950-)
 }
 \details{
-ONI Functions
+Part of a series of ENSO functions in library(enso)
 }
 \author{
 Austin Richards and Molly Williams

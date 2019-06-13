@@ -41,6 +41,7 @@ library(devtools)
 install_github("molly-williams/enso")
 library(enso)
 library(testthat)
+devtools::build()
 
 ```
 
@@ -48,13 +49,12 @@ library(testthat)
 ```{r}
 
 # Import data from ONI databse (NOAA ESRL) as a multi-dimensional array
-enso_data_raw <-
-  read_delim(
-    "data/oni_data.csv",
-    delim = " ",
+enso_data_raw <- 
+   read_delim(
+    "data/enso_data_raw.csv",
+    delim = ",",
     col_types = cols(.default = col_character())
   )
-
     
 # Organize and tidy
 ## Each row has a single ONI value for a month and year
@@ -105,6 +105,7 @@ enso_plot(enso_data)
 #precipitation function, user inputs ONI only, result is in monthly rainfall in inches
 
 predict_precip(port_moresby, ONI = 1)
+predict_precip(fake_oni_data, ONI = 1)
 
 ```
 

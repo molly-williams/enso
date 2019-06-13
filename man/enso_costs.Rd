@@ -2,7 +2,7 @@
 % Please edit documentation in R/enso_costs.R
 \name{enso_costs}
 \alias{enso_costs}
-\title{Temperature Prediction}
+\title{Natural Disaster Cost Prediction}
 \usage{
 enso_costs(ONI, risk = 0.811, gdp = 21.9)
 }
@@ -17,10 +17,10 @@ enso_costs(ONI, risk = 0.811, gdp = 21.9)
 Expected One Year Increase in Natural Disaster Costs Attributed to El Nino (Billions of USD)
 }
 \description{
-This function predicts temperature for a specific location based on ONI values
+This function predicts the natural disaster costs for a specific location based on monthly Ocean Nino Index (ONI) values, risk factor, and GDP
 }
 \details{
-ENSO Functions
+Part of a series of ENSO functions in library(enso)
 }
 \author{
 Austin Richards and Molly Williams

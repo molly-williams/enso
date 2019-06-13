@@ -18,7 +18,7 @@ Geom_smooth plot
 This functions produces a figure of ONI values over time (1950-)
 }
 \details{
-ONI Functions
+Part of a series of ENSO functions in library(enso)
 }
 \author{
 Austin Richards and Molly Williams

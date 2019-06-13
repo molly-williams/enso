@@ -12,12 +12,12 @@
 
 ### Predict Precip
 
-library(tidyverse)
 
 predict_precip = function(data, ONI=0) {
+  library(tidyverse)
   model <- lm(PRCP ~ ONI, data = (data))
   prediction <- model$coefficients[1] + ((model$coefficients[2]) * ONI)
-  names(prediction) <- NULL
+#  names(prediction) <- NULL
 
   if(ONI > 3)
   return("Error, ONI can only be between -3 and 3")
